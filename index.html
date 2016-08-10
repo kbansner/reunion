@@ -1920,6 +1920,9 @@
 		<script src="./lib/js/head.min.js"></script>
 		<script src="./js/reveal.js"></script>
 		<script>
+			// Preprocessing
+			// Add formal photo to upper right side of following sections
+			// Add name to following sections
 			$('.reveal > .slides > section').each(function(){
 				var src = $('figure.formal > img', this).attr('src');
 				var $person = ('<aside>' + ($('figcaption', this).text()) + '</aside>');
@@ -1934,8 +1937,8 @@
 			});
 
 			Reveal.initialize({
-				width: 960,
-				height: 700,
+				// width: 960,
+				// height: 700,
 				center: true,
 				history: true,
         autoSlide: 10000,
