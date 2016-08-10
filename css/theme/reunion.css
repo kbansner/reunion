@@ -10,21 +10,8 @@
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
-/*body {
-  background: #F0F1EB;
-  background-color: #F0F1EB; }*/
 
 body {
-  /*background: #add9e4;
-  background: -moz-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #f7fbfc), color-stop(100%, #add9e4));
-  background: -webkit-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
-  background: -o-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
-  background: -ms-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
-  background: radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
-  background-color: #f7fbfc;*/
-
-  /*background: #add9e4;*/
   background: -moz-radial-gradient(center, circle cover, #fff 0%, #ffd17e 100%);
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #fff), color-stop(100%, #ffd17e));
   background: -webkit-radial-gradient(center, circle cover, #fff 0%, #ffd17e 100%);
@@ -106,38 +93,6 @@ body {
 .reveal em {
   font-style: italic; }
 
-.reveal ol,
-.reveal dl,
-.reveal ul {
-  display: inline-block;
-  text-align: left;
-  margin: 0 0 0 1em; }
-
-.reveal ol {
-  list-style-type: decimal; }
-
-.reveal ul {
-  list-style-type: disc; }
-
-.reveal ul ul {
-  list-style-type: square; }
-
-.reveal ul ul ul {
-  list-style-type: circle; }
-
-.reveal ul ul,
-.reveal ul ol,
-.reveal ol ol,
-.reveal ol ul {
-  display: block;
-  margin-left: 40px; }
-
-.reveal dt {
-  font-weight: bold; }
-
-.reveal dd {
-  margin-left: 40px; }
-
 .reveal q,
 .reveal blockquote {
   quotes: none; }
@@ -171,56 +126,6 @@ body {
   word-wrap: break-word;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
 
-.reveal code {
-  font-family: monospace; }
-
-.reveal pre code {
-  display: block;
-  padding: 5px;
-  overflow: auto;
-  max-height: 400px;
-  word-wrap: normal; }
-
-.reveal table {
-  margin: auto;
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-.reveal table th {
-  font-weight: bold; }
-
-.reveal table th,
-.reveal table td {
-  text-align: left;
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  border-bottom: 1px solid; }
-
-.reveal table th[align="center"],
-.reveal table td[align="center"] {
-  text-align: center; }
-
-.reveal table th[align="right"],
-.reveal table td[align="right"] {
-  text-align: right; }
-
-.reveal table tbody tr:last-child th,
-.reveal table tbody tr:last-child td {
-  border-bottom: none; }
-
-.reveal sup {
-  vertical-align: super; }
-
-.reveal sub {
-  vertical-align: sub; }
-
-.reveal small {
-  display: inline-block;
-  font-size: 0.6em;
-  line-height: 1.2em;
-  vertical-align: top; }
-
-.reveal small * {
-  vertical-align: top; }
 
 /*********************************************
  * LINKS
@@ -306,3 +211,71 @@ body {
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+
+/*********************************************
+ * CUSTOM STUFF
+ *********************************************/
+
+ .reveal section .formal img {
+   max-height: 50vh;
+   border: 0;
+ }
+ .bw img {
+   -webkit-filter: grayscale(100%);
+   filter: grayscale(100%);
+ }
+
+ .reveal h1.accent {
+   text-shadow: 4px 4px 0px white;
+ }
+
+ .reveal h4 {
+   margin-bottom: 0.25em;
+   font-size: 1em;
+   font-weight: bold;
+   font-style: italic;
+   color: #eab157;
+   text-align: left;
+   text-shadow: 1px 2px 1px #ffe8bd;
+   letter-spacing: -1px;
+ }
+ .reveal h5 {
+   margin-right: 4em;
+   font-size: 1em;
+   line-height: 1.4em;
+   text-align: left;
+
+ }
+ .bhs-red {
+   color: #b50808 !important;
+ }
+
+ .reveal aside {
+   position: relative;
+   margin-top: 0.8em;
+   right: -10em;
+   width: 16em;
+   text-align: right;
+   font-size: 0.85em;
+   color: #555;
+   font-style: italic;
+   letter-spacing: 1px;
+ }
+
+ .reveal section aside:only-child:before {
+   content: '';
+   position: relative;
+   display: block;
+   height: 65vh;
+ }
+ .reveal section aside:only-child {
+   position: relative;
+   left: 0;
+   right: 0;
+   text-align: center;
+   width: auto;
+   font-style: normal;
+   color: whitesmoke;
+   text-shadow: 0 0 15px rgba(0,0,0,0.9);
+ }
