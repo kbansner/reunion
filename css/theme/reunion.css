@@ -88,15 +88,6 @@ body {
 /*********************************************
  * OTHER
  *********************************************/
-.reveal footer {
-  position: fixed;
-  bottom: 1em;
-  left: 0;
-  right: 0;
-  text-align: center;
-  color: whitesmoke;
-  text-shadow: 0 0 15px rgba(0,0,0,0.9);
-}
 .reveal p {
   margin: 20px 0;
   line-height: 1.3; }
