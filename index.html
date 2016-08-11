@@ -18,7 +18,60 @@
 
 		<div class="reveal">
 
-			<div class="slides">
+			<div id="memorybook" class="slides">
+				<section data-template data-transition="zoom-in fade-out" style="display: none;">
+					<section data-autoslide="8000">
+						<figure class="formal">
+							<img src="" data-src="./img/formals/{{formal}}"/>
+							<figcaption>{{name}}</figcaption>
+						</figure>
+					</section>
+
+					{% if (typeof(q1) !== 'undefined') %}
+						<section data-background-image="./img/formals/{{formal}}" data-background-size="5em" data-background-position="97% 4%">
+							<h4 class="{{labels}}">Where will I be on August 13th?</h4>
+							<h5>{{q1}}</h5>
+							<aside>{{name}}</aside>
+						</section>
+					{% endif %}
+
+					{% if (typeof(q2) !== 'undefined') %}
+						<section data-background-image="./img/formals/{{formal}}" data-background-size="5em" data-background-position="97% 4%">
+							<h4 class="{{labels}}">What I was doing in high school?</h4>
+							<h5>{{q2}}</h5>
+							<aside>{{name}}</aside>
+						</section>
+					{% endif %}
+
+					{% if (typeof(q3) !== 'undefined') %}
+						<section data-background-image="./img/formals/{{formal}}" data-background-size="5em" data-background-position="97% 4%">
+							<h4 class="{{labels}}">What I'm doing now?</h4>
+							<h5>{{q3}}</h5>
+							<aside>{{name}}</aside>
+						</section>
+					{% endif %}
+
+					{% if (typeof(q4) !== 'undefined') %}
+						<section data-background-image="./img/formals/{{formal}}" data-background-size="5em" data-background-position="97% 4%">
+							<h4 class="{{labels}}">What would surprise you?</h4>
+							<h5>{{q4}}</h5>
+							<aside>{{name}}</aside>
+						</section>
+					{% endif %}
+
+					{% if (typeof(q5) !== 'undefined') %}
+						<section data-background-image="./img/formals/{{formal}}" data-background-size="5em" data-background-position="97% 4%">
+							<h4 class="{{labels}}">What I'm looking forward to at our Reunion?</h4>
+							<h5>{{q5}}</h5>
+							<aside>{{name}}</aside>
+						</section>
+					{% endif %}
+
+					{% if (typeof(selfy) !== 'undefined') %}
+						<section data-background-image="./img/selfies/{{selfy}}" data-background-color="#000000" data-background-size="contain">
+						</section>
+					{% endif %}
+				</section>
 
 				<section data-autoslide="10000" data-background-color="#ffd17e">
           <h3 class="bhs-red" data-fragment-index="2">
@@ -1917,24 +1970,133 @@
 		</div>
 
 		<script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+		<script type="text/javascript" src="./lib/js/tempo.min.js"></script>
+		<script type="text/javascript">
+			var data = [
+				{
+					id: 'Hunt-Dedra',
+					name: 'Dedra Hunt',
+					formal: 'Hunt-Dedra.png',
+					selfy: 'Hunt-Dedra.jpg',
+					labels: 'show',
+					q1: "On August 13, I will be attending our 30th class reunion and I can't wait to see my former classmates.",
+					q2: "In high school, I was under the radar but I had wonderful experiences at Berkeley High. I have wonderful memories of hanging out on the slopes with my friends. My favorite class was home economics because I love to sew and African American Studies. Mr. Navies was an amazing teacher.",
+					q3: "I currently work in education, impacting the next generation to help became productive citizens.",
+					q5: "At our 30th reunion, I am looking forward to reconnecting with old friends and making new ones."
+				},
+				{
+					id: 'Perez-Lourdes',
+					name: 'Lourdes Perez',
+					formal: 'Perez-Lourdes.png',
+					selfy: 'Perez-Lourdes.jpg',
+					labels: 'show',
+					q1: "I will be attending our amazing 30th-year reunion on August 13.",
+					q2: "I had a wonderful high school experience. Even though I was extremely shy, I enjoyed talking to people and making friends. I spend most of my time hanging out with my sisters, high school sweetheart, and classmates. I loved reaching out and being friends with our exchange students and new students. I enjoyed listening to their fascinating stories.",
+					q3: "I am currently a Transitional Bilingual Education teacher. I get the greatest sense of satisfaction while teaching from knowing that I have made a difference in the life of children.",
+					q5: "At our reunion, I am looking forward to being in the same room with an amazing group of talented and kind-hearted classmates. If possible, reconnecting and reaching out to everyone. I want to celebrate other's success and accomplishments. Looking forward to everyone's smiles, laughs, positive energy, and reminiscing."
+				},
+				{
+					id: 'Reiff-Devan',
+					name: 'Devan Reiff',
+					formal: 'Reiff-Devan.png',
+					selfy: 'Reiff-Devan.jpg',
+					labels: 'hide',
+					q3: "After years living in Portland, OR and Brooklyn, NY, I am back in the East Bay for good, with wife Karen (20 years) and our new dog, Clover.  We bought a house in El Cerrito,  where we are raising a small orchard in the backyard, and slowly try for self-sufficency.",
+					q4: "I am an urban planner for the City of Oakland, and you might be surprised to know I worked on Oakland's attempts to keep the Raiders and A's in Oakland, which hasn't yet borne fruit, but we can hope.",
+					q5: "At the Reunion, I want to hear how people are staying sane in insane times (getting a dog helps!)  I'm also interested in documenting memories and recollections of life in 1980's Berkeley."
+				},
+				{
+					id: 'Stevens-Rachel',
+					name: 'Rachel Stevens',
+					formal: 'Stevens-Rachel.png',
+					selfy: 'Stevens-Rachel.jpg',
+					labels: 'show',
+					q1: "Hello! I am sorry to miss everyone at the reunion, but it has been fun to see all the photos and posts so far.",
+					q2: "In high school I was playing violin, singing in chorus, stressing out and, I guess, making arty photos. Also, Uptones concerts, taking the bus to SF to go to the Fab Mab with Coco Halverson (Coco Nijhoff), etc.",
+					q3: "Since high school I have lived in Providence, San Francisco, San Diego and New York City, where I've lived since 1999. I went to art school, twice. Now I teach media art and theory to graduate students part time, work as a web designer, and develop various art projects. Last year I collaborated on a community cookbook featuring seafood recipes, stories, drawings and ecological info from people on the Lower East Side that tied people's urban lives to the incredible estuary that surrounds NYC."
+				},
+				{
+					id: 'Friedman-Natalie',
+					name: 'Natalie Friedman',
+					formal: 'Friedman-Natalie.jpg',
+					selfy: 'Friedman-Natalie.jpg',
+					labels: 'show',
+					q1: "On August 13th I will be at the reunion.",
+					q2: "I think I spent most of high school hiding.",
+					q3: "Now, much to my surprise, I am a hard core soccer mom, short order cook, chauffeur, personal assistant, otherwise know as a full time mother. I love it!! I try to fit in a piece of art a day also."
+				},
+				{
+					id: 'Ng-Karen',
+					name: 'Karen Ng',
+					formal: 'Ng-Karen.png',
+					selfy: 'Ng-Karen.jpg',
+					labels: 'show',
+					q2: "What was I doing in high school? Hanging out with my friends, and dating Dave Roberts.",
+					q3: "What am I doing now? I am an attorney and partner at Nixon Peabody LLP in San Francisco where I specialize in helping companies become employee owned (I am an ESOP attorney). I live in Berkeley with my husband, two kids and a dog. What might surprise you? I am married to Dave Roberts (yes, the guy I dated in high school and who refuses to attend the reunion), and my son will start at BHS in the fall."
+				},
+				{
+					id: 'Watkins-Michelle',
+					name: 'Michelle Watkins',
+					formal: 'Watkins-Michelle.jpg',
+					selfy: 'Watkins-Michelle.jpg',
+					labels: 'hide',
+					q1: "My name is Michelle Watkins remember alot of people from the last class of ninth graders at West Campus. I moved from Berkeley after I graduated to Long Beach Ca where Iived for over 25 years recently moved back to Nothern Ca to be closer to family. Looking forward to seeing former classmates. I recently lost my sister Erika Watkins who was in Bhs class of 87."
+				},
+				{
+					id: 'Cho-Lailina',
+					name: 'Lailina Cho',
+					formal: 'Cho-Lailina.png',
+					selfy: 'Cho-Lailina.jpg',
+					labels: 'show',
+					q1: "Thank you to everyone who have worked hard to put together this 30th reunion! I'm sorry to miss it as I'm getting ready to help my middle son move into college as a freshman. I hope you all have an amazing time!",
+					q2: "In high school, I was more reserved and wish I had gotten to know more of my peers. It's great to read about what everyone is doing now and seeing all the pictures. I loved being on the tennis team though, living in Berkeley, and working on weekends at Berkeley Bowl for a Chinese family that owned the deli and meat shop.",
+					q3: "I'm now living in New York and am married with 3 kids. I was a stay-at-home mom for 15 years- we lived in Japan and England for a total of 9 years, and I learned the value of getting to know people and different cultures from around the world. Their stories are fascinating. I did some freelance writing and then 6 years ago, I discovered my passion as a group fitness and indoor cycling instructor.",
+					q4: "I'm not sure what might surprise you all about me, but what surprised me was how I've met some really cool people in high school, but due to circumstances and relocation at the time, I was not able to continue the friendships. 25+ years later, it's wonderful to be reconnected to some of them and see what awesome, inspiring people they've turned out to be. I hope you all will continue to keep well and stay awesome, too!"
+				},
+				{
+					id: 'Dean-John',
+					name: 'John Dean',
+					formal: 'Dean-John.png',
+					selfy: 'Dean-John.jpg',
+					labels: 'show',
+					q1: "On August 13th, I will be with my dad, a BHS alum and former counselor, at our family cabin near Caples Lake, so I'm going to miss the reunion that night.",
+					q2: "In high school, I was talking too much and not listening enough, playing sports and wearing baseball caps. (Ironically, I did not wear a Giants cap!) I spent much of my time at school with a small close group of friends, whom I don't see often enough these days.",
+					q3: "My wife and I live in the Bay Area, where we are raising our children. I miss Berkeley and try to visit my parents who still live in the house where I grew up as often as possible.",
+					q4: "If people would stop throwing cigarette butts out of their cars while driving.....An open, honest political debate that focuses on issues, ideas and vision.....That the A's/Raiders will both stay in Oakland....Hope to see you soon!"
+				},
+				{
+					id: 'Kunis-Kalindi',
+					name: 'Kalindi Kunis',
+					formal: 'Kunis-Kalindi.png',
+					selfy: 'Kunis-Kalindi.jpg',
+					labels: 'show',
+					q1: "I'm sorry to miss the reunion. I will be at my dear friend's wedding party.",
+					q2: "In high school I was on the newspaper and yearbook as a staff photographer",
+					q3: "I'm a fine artist and graphic designer now."
+				},
+			]
+      Tempo.prepare('memorybook').append(data);
+		</script>
+
 		<script src="./lib/js/head.min.js"></script>
 		<script src="./js/reveal.js"></script>
 		<script>
 			// Preprocessing
 			// Add formal photo to upper right side of following sections
 			// Add name to following sections
-			$('.reveal > .slides > section').each(function(){
-				var src = $('figure.formal > img', this).attr('src');
-				var $person = ('<aside>' + ($('figcaption', this).text()) + '</aside>');
-				if (src) {
-					$('section > h5', this).parent('section')
-						.attr('data-background-image', src)
-						.attr('data-background-size', '5em')
-						.attr('data-background-position', '97% 4%')
-						.append($person);
-					$('section[data-background-size="contain"]', this).append($person);
-				}
-			});
+			// $('.reveal > .slides > section').each(function(){
+			// 	var src = $('figure.formal > img', this).attr('src');
+			// 	var $person = ('<aside>' + ($('figcaption', this).text()) + '</aside>');
+			// 	if (src) {
+			// 		$('section > h5', this).parent('section')
+			// 			.attr('data-background-image', src)
+			// 			.attr('data-background-size', '5em')
+			// 			.attr('data-background-position', '97% 4%')
+			// 			.append($person);
+			// 		$('section[data-background-size="contain"]', this).append($person);
+			// 	}
+			// });
 
 			Reveal.initialize({
 				// width: 960,
