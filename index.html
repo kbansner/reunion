@@ -69,6 +69,7 @@
 
 					{% if (typeof(selfy) !== 'undefined') %}
 						<section data-background-image="./img/selfies/{{selfy}}" data-background-color="#000000" data-background-size="contain">
+							<aside>{{name}}</aside>
 						</section>
 					{% endif %}
 				</section>
@@ -650,7 +651,7 @@
           <section data-autoslide="8000">
             <figure class="formal">
               <img src="./img/formals/Iwase-Suzanne.png"/>
-              <figcaption>Suzanne Iwase</figcaption>
+              <figcaption>Susana Iwase</figcaption>
             </figure>
           </section>
 
@@ -2039,7 +2040,7 @@
 					id: 'Watkins-Michelle',
 					name: 'Michelle Watkins',
 					formal: 'Watkins-Michelle.jpg',
-					selfy: 'Watkins-Michelle.jpg',
+					// selfy: 'Watkins-Michelle.jpg',
 					labels: 'hide',
 					q1: "My name is Michelle Watkins remember alot of people from the last class of ninth graders at West Campus. I moved from Berkeley after I graduated to Long Beach Ca where Iived for over 25 years recently moved back to Nothern Ca to be closer to family. Looking forward to seeing former classmates. I recently lost my sister Erika Watkins who was in Bhs class of 87."
 				},
@@ -2075,6 +2076,52 @@
 					q2: "In high school I was on the newspaper and yearbook as a staff photographer",
 					q3: "I'm a fine artist and graphic designer now."
 				},
+				{
+					id: 'Burns-Terry',
+					name: 'Terry Burns',
+					formal: 'Burns-Terry.png',
+					selfy: 'Burns-Terry.jpg',
+					labels: 'show',
+					q1: "I will be at BHS c/o 86 reunion on August 13th",
+					q2: "In high school I was enjoying myself off and on the Hoop court, in which I was surrounded by Great teammates and Great classmates ",
+					q5: "@ the reunion I'm looking forward to spending time with my friends, networking and just Enjoying the special Moment of being a part of class of 86❤💙 #YellowJackets"
+				},
+				{
+					id: 'Anderson-Lucy',
+					name: 'Lucy Anderson',
+					formal: 'Anderson-Lucy.png',
+					selfy: 'Anderson-Lucy.jpg',
+					labels: 'show',
+					q1: "On August 13 I will be on “vacation” (there’s never a vacation with a young child) in a French town named Millau which is about 3 hours from where I live in a teeny, beautiful south-western village where I ended up initially as the writer-in-residence for the Virginia Center for the Creative Arts. Ask Kai. He actually biked through one afternoon and sat in my living room. Which was surreal.",
+					q2: "Dude. I was just trying to get by. It was rough. But I had a great time on the tennis team (Amy Nellis, partner extraordinaire—hey girl, I see you!), and in Dance Production and African Haitian Dance class.",
+					q3: "I make my living as a writer and editor. And I’m raising my four-year-old bilingual girl, Ophelia, with my French man person. This, after rebuilding from ruin a 500-year-old series of 4 connected houses. Oh, and I’m doing what I can to stop the nation of France from clapping on the 1 and the 3. Also, I’m starting to enjoy whiskey. So shortly I will be quitting.",
+					q4: "I don’t know what would surprise you. What surprised me was that I actually decided to have a child and then did so with no medical treatment at 42. What might surprise you to laughing is that I spent a year as a runway model in Paris. I know. Hilarious.",
+					q5: "Have a lovely time, you Berkeley people!!! This has all been heartwarming!!"
+				},
+				{
+					id: 'Mitchell-Julia',
+					name: 'Julia Mitchell',
+					formal: 'Mitchell-Julia.png',
+					selfy: 'Mitchell-Julia.jpg',
+					labels: 'hide',
+					q2: "In high school I was editing the yearbook with Jessie, rowing crew, experiencing typical teenage angst (thinking I was the only one), getting away with buying alcohol with my fake id, carting friends around in the VW bus on weekends trying to find the dance parties, and getting ready to leave Berkeley for a year in Belgium before heading off to college. ",
+					q3: "These days I live in Oakland with my 6 year old son and his Dad, work in Creative Operations at Clif Bar, lament that I'm not as involved in theater and dance as I'd like to be, and try to see my Btown gals as often as I can."
+				},
+
+				//
+				// {
+				// id: '',
+				// name: '',
+				// formal: '.png',
+				// selfy: '.jpg',
+				// labels: 'show',
+				// q1: "",
+				// q2: "",
+				// q3: "",
+				// q4: "",
+				// q5: ""
+				// },
+
 			]
       Tempo.prepare('memorybook').append(data);
 		</script>
