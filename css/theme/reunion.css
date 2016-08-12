@@ -57,6 +57,14 @@ body {
   text-shadow: none;
   word-wrap: break-word; }
 
+.reveal .cover h1,
+.reveal .cover h2,
+.reveal .cover h3 {
+  font-family: "Copperplate", "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;
+  line-height: 1em;
+  color: #b50808;
+}
+
 .reveal h1 {
   font-size: 3.77em; }
 
@@ -152,7 +160,7 @@ body {
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #000;
+  border: 3px solid #000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .reveal section img.plain {
@@ -226,7 +234,7 @@ body {
    filter: grayscale(100%);
  }
 
- .reveal h1.accent {
+ .reveal .accent {
    text-shadow: 4px 4px 0px white;
  }
 
@@ -247,15 +255,10 @@ body {
    text-align: left;
 
  }
- .bhs-red {
-   color: #b50808 !important;
- }
 
  .reveal aside {
    position: relative;
-   margin-top: 0.8em;
-   right: -10em;
-   width: 16em;
+   margin: 0.8em 8em;
    text-align: right;
    font-size: 0.85em;
    color: #555;
@@ -282,4 +285,9 @@ body {
 
 .reveal .hide {
   display: none;
+}
+
+.reveal .cover img {
+  margin: 0.5 0 2em;
+  max-width: 3.5em;
 }

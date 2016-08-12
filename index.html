@@ -74,18 +74,17 @@
 					{% endif %}
 				</section>
 
-				<section data-autoslide="10000" data-background-color="#ffd17e">
-          <h3 class="bhs-red" data-fragment-index="2">
-						Class of 86'
-						<br/>
-						Berkeley High School
+				<section class="cover" data-autoslide="1000" data-background-color="#ffd17e">
+          <h3 class="bhs-red fragment" data-autoslide="2000" data-fragment-index="1">
+						BHS
+						<br />
+						Class of 86
 					</h3>
-					<h1 class="bhs-red accent" data-fragment-index="1">30th Reunion</h1>
-
-					<div class='fragment grow' data-autoslide="1000" data-fragment-index="3">
-						<img src="./img/logos/Berkeley_Jacket.png" />
+					<div class='fragment fade-down' data-autoslide="5000" data-fragment-index="2">
+						<h1 class="bhs-red accent">30th Reunion</h1>
+						<div><img src="./img/logos/yellow-jacket.png" /></div>
+						<h2 class="bhs-red accent">Memory Book</h2>
 					</div>
-					<h3 class="bhs-red">Memory Book</h1>
 				</section>
 
 				<section data-autoslide="6000">
@@ -461,6 +460,7 @@
 				 "id": "Metzger-Miriam",
 				 "name": "Miriam Metzger",
 				 "formal": "Metzger-Miriam.png",
+				 "selfy": "Metzger-Miriam.jpg",
 				 "labels": "show",
 				 "q1": "I am living in Holland this year with my family, and traveling for 2 months this summer so I will not be at the reunion.",
 				 "q3": "When not in Europe, I live in Santa Barbara where I am a professor at UCSB. I teach there and conduct research on social aspects of information technology.",
@@ -860,8 +860,8 @@
 		<script src="./js/reveal.js"></script>
 		<script>
 			Reveal.initialize({
-				// width: 960,
-				// height: 700,
+				width: 1200,
+				height: 800,
 				center: true,
 				history: true,
         autoSlide: 10000,
