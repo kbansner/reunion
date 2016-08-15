@@ -256,7 +256,7 @@ body {
 
  }
 
- .reveal aside {
+ .reveal aside.author {
    position: relative;
    margin: 0.8em 8em;
    text-align: right;
@@ -266,13 +266,13 @@ body {
    letter-spacing: 1px;
  }
 
- .reveal section aside:only-child:before {
+ .reveal section aside.author:only-child:before {
    content: '';
    position: relative;
    display: block;
    height: 65vh;
  }
- .reveal section aside:only-child {
+ .reveal section aside.author:only-child {
    position: relative;
    left: 0;
    right: 0;

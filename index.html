@@ -31,7 +31,7 @@
 						<section data-background-image="./img/formals/{{formal}}" data-background-size="5em" data-background-position="97% 4%">
 							<h4 class="{{labels}}">Where will I be on August 13th?</h4>
 							<h5>{{q1}}</h5>
-							<aside>{{name}}</aside>
+							<aside class="author">{{name}}</aside>
 						</section>
 					{% endif %}
 
@@ -39,7 +39,7 @@
 						<section data-background-image="./img/formals/{{formal}}" data-background-size="5em" data-background-position="97% 4%">
 							<h4 class="{{labels}}">What I was doing in high school?</h4>
 							<h5>{{q2}}</h5>
-							<aside>{{name}}</aside>
+							<aside class="author">{{name}}</aside>
 						</section>
 					{% endif %}
 
@@ -47,7 +47,7 @@
 						<section data-background-image="./img/formals/{{formal}}" data-background-size="5em" data-background-position="97% 4%">
 							<h4 class="{{labels}}">What I'm doing now?</h4>
 							<h5>{{q3}}</h5>
-							<aside>{{name}}</aside>
+							<aside class="author">{{name}}</aside>
 						</section>
 					{% endif %}
 
@@ -55,7 +55,7 @@
 						<section data-background-image="./img/formals/{{formal}}" data-background-size="5em" data-background-position="97% 4%">
 							<h4 class="{{labels}}">What would surprise you?</h4>
 							<h5>{{q4}}</h5>
-							<aside>{{name}}</aside>
+							<aside class="author">{{name}}</aside>
 						</section>
 					{% endif %}
 
@@ -63,13 +63,13 @@
 						<section data-background-image="./img/formals/{{formal}}" data-background-size="5em" data-background-position="97% 4%">
 							<h4 class="{{labels}}">What I'm looking forward to at our Reunion?</h4>
 							<h5>{{q5}}</h5>
-							<aside>{{name}}</aside>
+							<aside class="author">{{name}}</aside>
 						</section>
 					{% endif %}
 
 					{% if (typeof(selfy) !== 'undefined') %}
 						<section data-background-image="./img/selfies/{{selfy}}" data-background-color="#000000" data-background-size="contain">
-							<aside>{{name}}</aside>
+							<aside class="author">{{name}}</aside>
 						</section>
 					{% endif %}
 				</section>
@@ -996,12 +996,12 @@
 		<script src="./js/reveal.js"></script>
 		<script>
 			Reveal.initialize({
-				width: 1200,
-				height: 800,
+				// width: 1200,
+				// height: 800,
 				center: true,
 				history: true,
         autoSlide: 10000,
-				controls: false,
+				controls: true,
 				progress: true,
         loop: true
 				// shuffle: true,
